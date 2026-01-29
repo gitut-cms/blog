@@ -2,74 +2,70 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>موقعي الجديد | مدونة احترافية مستوردة من بلوجر</title>
+        <title>موقعي الجديد</title>
         <meta name="description" content="موقع ثابت تم إنشاؤه باستخدام Gitut CMS.">
-        <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/606/606203.png">
         <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
         
     <style>
-        body { 
-            font-family: 'Cairo', sans-serif; 
-            color: #1e293b;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 1.7;
-        }
-        .post-title { font-family: 'Cairo', sans-serif !important; color: #0f172a !important; font-size: 48px !important; font-weight: 900 !important; line-height: 1.2 !important; margin-bottom: 2rem; }
-        .prose h2 { font-family: 'Cairo', sans-serif !important; color: #1e293b !important; font-size: 32px !important; font-weight: 700 !important; margin-top: 2rem !important; }
-        .prose a { color: #6366f1 !important; font-weight: 700; text-decoration: underline; }
-        .card-title { font-family: 'Cairo', sans-serif !important; color: #1e293b !important; font-size: 20px !important; font-weight: 800 !important; }
-        .article-inner-content { padding: 48px 32px 48px !important; }
-        .prose p { margin-bottom: 24px !important; }
-        .prose img { border-radius: 1.5rem; margin: 2rem auto; max-width: 100%; height: auto; display: block; }
-        [dir="rtl"] .prose { text-align: right; }
-        [dir="ltr"] .prose { text-align: left; }
-        .logo-text { color: #0f172a; }
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Scheherazade+New:wght@400;700&display=swap');
+        body { font-family: 'Cairo', 'Scheherazade New', serif; scroll-behavior: smooth; background-color: #f8fafc; color: #334155; }
+        .prose { color: #1e293b; max-width: none; }
+        .prose h2 { color: #0f172a; font-size: 1.875rem; font-weight: 800; padding-right: 1rem; border-right: 4px solid #0ea5e9; margin-bottom: 1.5rem; margin-top: 3rem; }
+        .prose h3 { color: #1e293b; font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; margin-top: 2.5rem; }
+        .prose p { font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.25rem; }
+        .prose img { border-radius: 1.5rem; margin: 2rem 0; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+        .post-header-gradient { background: linear-gradient(135deg, #0f172a 0%, #075985 100%); }
+        .no-underline { text-decoration: none !important; }
     </style>
-
-        
+    
     </head>
-    <body class="bg-slate-50">
-        <header class="bg-white border-b h-24 flex items-center">
-            <div class="max-w-6xl mx-auto px-4 w-full flex items-center justify-between">
-                <a href="/"><span class="text-3xl font-black logo-text tracking-tighter">موقعي الجديد</span></a>
-                <nav class="hidden md:flex items-center gap-8 text-sm font-black uppercase tracking-widest"><a href="/">الرئيسية</a></nav>
-            </div>
-        </header>
-        <main class="max-w-6xl mx-auto px-4 py-16">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <div class="lg:col-span-8">
-                    <div class="grid md:grid-cols-2 gap-8">
+    <body class="antialiased">
+        
+    <header class="bg-slate-900 text-white py-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-5">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center gap-6">
+                    <a href="/" class="flex items-center gap-3 no-underline">
                         
-                            <article class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
-                                
-                                <div class="p-6">
-                                    <h2 class="card-title mb-3 group-hover:text-indigo-600 transition-colors"><a href="/posts/سيبسيبسيب.html">بيسيبسيبسيب</a></h2>
-                                    <p class="text-slate-500 text-sm line-clamp-2">سيبسبسيبسيب...</p>
-                                    <a href="/posts/سيبسيبسيب.html" class="mt-4 block text-xs font-black text-indigo-500 uppercase">اقرأ المزيد →</a>
-                                </div>
-                            </article>
-                    </div>
+        <svg width="36" height="36" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#0ea5e9"/><path d="M22.5 16C22.5 19.5882 19.5882 22.5 16 22.5C12.4118 22.5 9.5 19.5882 9.5 16C9.5 12.4118 12.4118 9.5 16 9.5V13.5H18.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="text-2xl font-black text-white ml-2">موقعي الجديد</span>
+    
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
                     
                 </div>
-                <div class="lg:col-span-4"><aside class="space-y-6"><div class="sidebar-card p-6 bg-white border rounded-3xl"><h3 class="text-sm font-black mb-4 uppercase tracking-widest border-b pb-2">المقالات المقترحة</h3><div class="space-y-4"><a href="/posts/سيبسيبسيب.html" class="block text-sm font-bold hover:text-indigo-600">بيسيبسيبسيب</a></div></div></aside></div>
+            </nav>
+        </div>
+    </header>
+    
+        <main class="max-w-7xl mx-auto px-5 py-12">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-black text-slate-900 mb-4">موقعي الجديد</h1>
+                <p class="text-slate-500 text-lg">مدونة احترافية مستوردة من بلوجر</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                    <article class="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden flex flex-col hover:shadow-2xl transition-shadow">
+                        
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h2 class="text-xl font-bold text-slate-800 mb-3 leading-tight m-0">
+                                <a href="/posts/سيبسيبسيب.html" class="no-underline text-inherit hover:text-sky-600">بيسيبسيبسيب</a>
+                            </h2>
+                            <p class="text-slate-500 text-sm mb-6 flex-1">سيبسبسيبسيب...</p>
+                            <a href="/posts/سيبسيبسيب.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
+                                اقرأ المزيد
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="rotate-180"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
+                    </article>
+                    
             </div>
         </main>
-        <footer class="py-16 bg-slate-900 text-white">
-             <div class="max-w-6xl mx-auto px-4 text-center md:text-right">
-                <div class="grid md:grid-cols-3 gap-12">
-                    <div><div class="mb-4 brightness-0 invert"><span class="text-3xl font-black logo-text tracking-tighter">موقعي الجديد</span></div><p class="text-slate-400 text-sm">موقع ثابت تم إنشاؤه باستخدام Gitut CMS.</p></div>
-                    <div><h3 class="text-sm font-black mb-4 uppercase tracking-widest text-white">روابط سريعة</h3><nav class="flex flex-col gap-2 text-sm text-slate-400"></nav></div>
-                    <div><h3 class="text-sm font-black mb-4 uppercase tracking-widest text-white">تابعنا</h3>
-    <div class="flex flex-wrap gap-3 justify-center md:justify-start">
-        
-    </div>
-  </div>
-                </div>
+        <footer class="bg-slate-900 text-sky-200 text-center py-12 mt-16">
+            <div class="max-w-7xl mx-auto px-5">
+                <p class="text-sm m-0 opacity-60">&copy; 2026 موقعي الجديد. جميع الحقوق محفوظة.</p>
             </div>
         </footer>
-        
-        
     </body></html>
