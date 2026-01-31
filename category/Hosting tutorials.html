@@ -9,7 +9,6 @@
         
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
-        
         :root {
             --main-font: 'Cairo', sans-serif;
             --bg-color: #f8fafc;
@@ -17,25 +16,19 @@
             --text-size: 18px;
             --text-weight: 400;
             --line-height: 1.7;
-            
             --title-font: var(--main-font);
             --title-color: #2258d8;
             --title-size: 48px;
             --title-weight: 900;
-            
             --sub-font: var(--main-font);
             --sub-color: #4bba17;
             --sub-size: 32px;
             --sub-weight: 700;
-            
             --h3-color: #1e293b;
             --h3-size: 24px;
-            
             --link-color: #6366f1;
-            
             --card-title-color: #1e293b;
             --card-title-size: 20px;
-            
             --para-spacing: 24px;
             --post-padding-top: 48px;
             --blockquote-bg: #f1f5f9;
@@ -48,31 +41,19 @@
         .prose h3 { color: var(--h3-color); font-size: var(--h3-size); font-weight: 800; margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 1.5); line-height: 1.4; }
         .prose p { margin-bottom: var(--para-spacing); font-weight: var(--text-weight); }
         .prose a { color: var(--link-color); text-decoration: underline; }
-        
-        /* تنسيق القوائم */
         .prose ul { list-style-type: disc; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
         .prose ol { list-style-type: decimal; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
         .prose li { margin-bottom: 0.5rem; }
-        .prose li > ul, .prose li > ol { margin-top: 0.5rem; margin-bottom: 0.5rem; }
-
-        /* الصور والفيديو المستجيب */
         .prose img { max-width: 100%; height: auto; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) auto; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); display: block; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) 0; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        
-        /* الاقتباسات */
         .prose blockquote { background: var(--blockquote-bg); padding: 1.5rem 2rem; border-left: 6px solid var(--link-color); border-radius: 1rem; font-style: italic; margin: var(--para-spacing) 0; position: relative; color: #475569; }
         .prose blockquote::before { content: '“'; position: absolute; top: 0; left: 10px; font-size: 4rem; opacity: 0.1; line-height: 1; }
-        
-        /* كتل الكود */
         .prose pre { background: var(--code-bg); color: #f8fafc; padding: 1.5rem; border-radius: 1rem; font-family: 'Fira Code', 'Courier New', monospace; white-space: pre-wrap; word-break: break-all; max-width: 100%; overflow-x: auto; margin: var(--para-spacing) 0; line-height: 1.6; border: 1px solid rgba(255,255,255,0.1); }
         .prose code { background: rgba(0,0,0,0.05); color: var(--link-color); padding: 0.2rem 0.4rem; border-radius: 0.4rem; font-family: monospace; font-weight: bold; }
-        .prose pre code { background: transparent; color: inherit; padding: 0; border-radius: 0; font-weight: normal; }
-
         .post-header-gradient { background: linear-gradient(135deg, #0f172a 0%, #075985 100%); }
         .no-underline { text-decoration: none !important; }
         .card-title { color: var(--card-title-color); font-size: var(--card-title-size); font-family: var(--main-font); font-weight: 800; }
-        @media (max-width: 640px) { .prose h1 { font-size: calc(var(--title-size) * 0.7); } .prose h2 { font-size: calc(var(--sub-size) * 0.8); } .prose p { font-size: 0.95em; } }
     </style>
     
         <meta name="google-site-verification" content="555555555" />
@@ -115,7 +96,6 @@
                 <h1 class="text-4xl font-black text-slate-900 mb-4" style="color: var(--title-color);">Hosting tutorials</h1>
                 <p class="text-slate-500 text-lg">PRO BLLOG</p>
             </div>
-            
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                     <article class="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden flex flex-col hover:shadow-2xl transition-shadow">
@@ -129,7 +109,6 @@
 How Can Web Hosts Ensure Website Security with a Web Content Filter?As a website owner, it is essential to ensure that...</p>
                             <a href="/posts/how-can-web-hosts-ensure-website_01381769689.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
                                 Read More
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
                     </article>
@@ -145,7 +124,6 @@ How Can Web Hosts Ensure Website Security with a Web Content Filter?As a website
 What is a web server file access control, and how is it used in web hosting?In the world of web hosting, website secur...</p>
                             <a href="/posts/what-is-web-server-file-access-control.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
                                 Read More
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
                     </article>
@@ -161,7 +139,6 @@ What is a web server file access control, and how is it used in web hosting?In t
 What is Web Server SSL Offloading, and How is it Used in Web Hosting? Web hosting is a critical service that requires ...</p>
                             <a href="/posts/what-is-web-server-ssl-offloading-and.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
                                 Read More
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
                     </article>
@@ -177,7 +154,6 @@ What is Web Server SSL Offloading, and How is it Used in Web Hosting? Web hostin
 What is a Web Server Error Log, and How is it Used in Web Hosting?Web hosting is a complex process that involves many ...</p>
                             <a href="/posts/what-is-web-server-error-log-and-how-is.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
                                 Read More
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
                     </article>
@@ -193,7 +169,6 @@ What is a Web Server Error Log, and How is it Used in Web Hosting?Web hosting is
 What is a web server compression, and how is it used in web hosting? Web server compression is the process of compress...</p>
                             <a href="/posts/what-is-web-server-compression-and-how.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
                                 Read More
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
                     </article>
@@ -209,7 +184,6 @@ What is a web server compression, and how is it used in web hosting? Web server 
 What is a Web Server Directory Index and How is it Used in Web Hosting? When you visit a website, you're typically pre...</p>
                             <a href="/posts/what-is-web-server-directory-index-and.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
                                 Read More
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
                     </article>
@@ -225,7 +199,6 @@ What is a Web Server Directory Index and How is it Used in Web Hosting? When you
 How Can Web Hosts Ensure Website Reliability with Failover Systems? Website reliability is a critical aspect of web ho...</p>
                             <a href="/posts/how-can-web-hosts-ensure-website.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
                                 Read More
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
                     </article>
@@ -241,7 +214,6 @@ How Can Web Hosts Ensure Website Reliability with Failover Systems? Website reli
 What is a Web Server Virtual Host, and How is it Used in Web Hosting? Web hosting is a crucial part of any online busi...</p>
                             <a href="/posts/what-is-web-server-virtual-host-and-how.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
                                 Read More
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
                     </article>
@@ -257,7 +229,6 @@ What is a Web Server Virtual Host, and How is it Used in Web Hosting? Web hostin
 What is a Web Server Subdomain and How is it Used in Web Hosting?If you are building a website, you will need to purch...</p>
                             <a href="/posts/what-is-web-server-subdomain-and-how-is.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
                                 Read More
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
                     </article>
@@ -272,7 +243,6 @@ What is a Web Server Subdomain and How is it Used in Web Hosting?If you are buil
 In today's world of cybersecurity, it is essential to secure ...</p>
                             <a href="/posts/how-to-configure-https-on-wordpress_02058023338.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
                                 Read More
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </a>
                         </div>
                     </article>
@@ -281,7 +251,7 @@ In today's world of cybersecurity, it is essential to secure ...</p>
         </main>
         <footer class="bg-slate-900 text-sky-200 text-center py-12 mt-16">
             <div class="max-w-7xl mx-auto px-5">
-                <p class="text-sm m-0 opacity-60">&copy; 2026 <a href="https://cms.gitut.com" class="text-inherit hover:text-white transition-colors decoration-none">Visa earth</a>. All Rights Reserved</p>
+                <p class="text-sm m-0 opacity-60">&copy; 2026 Visa earth. All Rights Reserved</p>
             </div>
         </footer>
         
