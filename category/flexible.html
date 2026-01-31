@@ -8,59 +8,70 @@
         <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEjkGCrmp8eAGwzm3xT-8tifWeZwI6pwDti7gvpVxpW7aIMFfrxutIq8MaQVwWSonlisheakMWk_thkwsaiHUTGbGLsCkyIsER605MilN4jS184MEpAE_XOIl-L6qyNyVp9DKFv5mpOh8miC5A70cZeriTb45X94VYrmW1QhspDSXtSo2MJMuDECpGPTYpI">
         
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+        
         :root {
             --main-font: 'Cairo', sans-serif;
-            --bg-color: #f8fafc;
+            --bg-color: #0f172a;
             --text-color: #272023;
             --text-size: 18px;
             --text-weight: 400;
             --line-height: 1.7;
+            
             --title-font: 'Roboto';
             --title-color: #2258d8;
             --title-size: 48px;
             --title-weight: 900;
+            
             --sub-font: 'Roboto';
             --sub-color: #4bba17;
             --sub-size: 32px;
             --sub-weight: 700;
+            
             --h3-color: #1e293b;
             --h3-size: 24px;
             --link-color: #6366f1;
+            
             --card-title-color: #1e293b;
             --card-title-size: 20px;
+            
             --para-spacing: 24px;
             --post-padding-top: 48px;
             --blockquote-bg: #f1f5f9;
             --code-bg: #1e293b;
         }
-        body { font-family: var(--main-font); scroll-behavior: smooth; background-color: var(--bg-color); color: var(--text-color); font-size: var(--text-size); line-height: var(--line-height); overflow-x: hidden; }
+        
+        body { 
+            font-family: var(--main-font); 
+            scroll-behavior: smooth; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            font-size: var(--text-size); 
+            line-height: var(--line-height); 
+            overflow-x: hidden; 
+        }
+        
         .prose { max-width: 100%; overflow-wrap: break-word; }
         .prose h1 { font-family: var(--title-font); color: var(--title-color); font-size: var(--title-size); font-weight: var(--title-weight); margin-bottom: var(--para-spacing); }
         .prose h2 { font-family: var(--sub-font); color: var(--sub-color); font-size: var(--sub-size); font-weight: var(--sub-weight); padding-left: 1rem; border-left: 4px solid var(--link-color); margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 2); line-height: 1.4; }
         .prose h3 { color: var(--h3-color); font-size: var(--h3-size); font-weight: 800; margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 1.5); line-height: 1.4; }
         .prose p { margin-bottom: var(--para-spacing); font-weight: var(--text-weight); }
         .prose a { color: var(--link-color); text-decoration: underline; }
-        .prose ul { list-style-type: disc; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
-        .prose ol { list-style-type: decimal; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
-        .prose li { margin-bottom: 0.5rem; }
+        
         .prose img { max-width: 100%; height: auto; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) auto; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); display: block; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) 0; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .prose blockquote { background: var(--blockquote-bg); padding: 1.5rem 2rem; border-left: 6px solid var(--link-color); border-radius: 1rem; font-style: italic; margin: var(--para-spacing) 0; position: relative; color: #475569; }
-        .prose blockquote::before { content: '“'; position: absolute; top: 0; left: 10px; font-size: 4rem; opacity: 0.1; line-height: 1; }
-        .prose pre { background: var(--code-bg); color: #f8fafc; padding: 1.5rem; border-radius: 1rem; font-family: 'Fira Code', 'Courier New', monospace; white-space: pre-wrap; word-break: break-all; max-width: 100%; overflow-x: auto; margin: var(--para-spacing) 0; line-height: 1.6; border: 1px solid rgba(255,255,255,0.1); }
-        .prose code { background: rgba(0,0,0,0.05); color: var(--link-color); padding: 0.2rem 0.4rem; border-radius: 0.4rem; font-family: monospace; font-weight: bold; }
-        .post-header-gradient { background: linear-gradient(135deg, #0f172a 0%, #075985 100%); }
-        .no-underline { text-decoration: none !important; }
+        .prose blockquote { background: var(--blockquote-bg); padding: 1.5rem 2rem; border-left: 6px solid var(--link-color); border-radius: 1rem; font-style: italic; margin: var(--para-spacing) 0; position: relative; }
+        .prose pre { background: var(--code-bg); color: #f8fafc; padding: 1.5rem; border-radius: 1rem; font-family: monospace; white-space: pre-wrap; word-break: break-all; margin: var(--para-spacing) 0; }
+        
+        .post-header-gradient { background: linear-gradient(135deg, var(--title-color) 0%, var(--link-color) 100%); opacity: 0.9; }
         .card-title { color: var(--card-title-color); font-size: var(--card-title-size); font-family: var(--main-font); font-weight: 800; }
         
         .pagination { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 3rem; }
         .pagination a, .pagination span { padding: 0.75rem 1.25rem; border-radius: 1rem; font-weight: 800; text-decoration: none; font-size: 0.875rem; transition: all 0.2s; }
         .pagination a { background: white; color: var(--link-color); border: 1px solid #e2e8f0; }
-        .pagination a:hover { background: var(--link-color); color: white; border-color: var(--link-color); transform: translateY(-2px); }
+        .pagination a:hover { background: var(--link-color); color: white; border-color: var(--link-color); }
         .pagination .current { background: var(--link-color); color: white; border: 1px solid var(--link-color); }
-        .pagination .disabled { opacity: 0.5; cursor: not-allowed; background: #f1f5f9; color: #94a3b8; }
     </style>
     
         <meta name="google-site-verification" content="555555555" />
@@ -101,7 +112,7 @@
         <main class="max-w-7xl mx-auto px-5 py-12">
             <div class="text-center mb-12">
                 <h1 class="text-4xl font-black text-slate-900 mb-4" style="color: var(--title-color);">flexible</h1>
-                <p class="text-slate-500 text-lg">PRO BLLOG</p>
+                <p class="text-slate-500 text-lg">PRO BLLOGer</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
