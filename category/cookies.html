@@ -10,8 +10,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;800;900&display=swap');
         
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;800;900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;800;900&display=swap');
+        
+        
         
         
         
@@ -22,28 +22,28 @@
             
             /* Body Text */
             --text-font: var(--main-font);
-            --text-color: #d0397a;
+            --text-color: #1e293b;
             --text-size: 18px;
             --text-weight: 400;
             --text-line-height: 1.7;
             
             /* Post Title */
-            --title-font: 'Roboto';
-            --title-color: #d8226b;
+            --title-font: var(--main-font);
+            --title-color: #0f172a;
             --title-size: 48px;
             --title-weight: 900;
             --title-line-height: 1.2;
             
             /* Subtitles H2 */
-            --sub-font: 'Roboto';
-            --sub-color: #4bba17;
+            --sub-font: var(--main-font);
+            --sub-color: #1e293b;
             --sub-size: 32px;
             --sub-weight: 700;
             --sub-line-height: 1.4;
             
             /* H3 Titles */
             --h3-font: var(--main-font);
-            --h3-color: #1f1d3a;
+            --h3-color: #1e293b;
             --h3-size: 24px;
             --h3-weight: 700;
             --h3-line-height: 1.4;
@@ -55,7 +55,7 @@
             
             /* Card Title */
             --card-title-font: var(--main-font);
-            --card-title-color: #df2a6c;
+            --card-title-color: #1e293b;
             --card-title-size: 20px;
             --card-title-weight: 800;
             --card-title-line-height: 1.4;
@@ -129,7 +129,7 @@
         .prose blockquote::before { content: '“'; position: absolute; top: 0; left: 10px; font-size: 4rem; opacity: 0.1; line-height: 1; }
         .prose pre { background: var(--code-bg); color: #f8fafc; padding: 1.5rem; border-radius: 1rem; font-family: 'Fira Code', 'Courier New', monospace; white-space: pre-wrap; word-break: break-all; max-width: 100%; overflow-x: auto; margin: var(--para-spacing) 0; line-height: 1.6; border: 1px solid rgba(255,255,255,0.1); }
         .prose code { background: rgba(0,0,0,0.05); color: var(--link-color); padding: 0.2rem 0.4rem; border-radius: 0.4rem; font-family: monospace; font-weight: bold; }
-        .post-header-gradient { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+        .post-header-gradient { background: rgb(79 70 229 / var(--tw-bg-opacity, 1)); }
         .no-underline { text-decoration: none !important; }
         
         .card-title { 
@@ -183,7 +183,7 @@
         </div>
     </header>
     
-        <main class="max-w-7xl mx-auto px-5 py-12">
+        <main class="max-w-7xl mx-auto px-5 py-12 bg-white">
             <div class="text-center mb-12">
                 <h1 class="text-4xl font-black text-slate-900 mb-4" style="color: var(--title-color);">cookies</h1>
                 <p class="text-slate-500 text-lg">PRO BLLOGer</p>
@@ -208,7 +208,7 @@ If you're running a website...</p>
             </div>
             
         </main>
-        <footer class="bg-slate-900 text-sky-200 text-center py-12 mt-16">
+        <footer class="bg-slate-900 text-sky-200 text-center py-12">
             <div class="max-w-7xl mx-auto px-5">
                 <p class="text-sm m-0 opacity-60">&copy; 2026 <a href="https://cms.gitut.com/en" class="text-white no-underline hover:text-sky-400 transition-colors">Visa earth</a>. All Rights Reserved</p>
             </div>
