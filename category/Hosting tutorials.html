@@ -54,6 +54,13 @@
         .post-header-gradient { background: linear-gradient(135deg, #0f172a 0%, #075985 100%); }
         .no-underline { text-decoration: none !important; }
         .card-title { color: var(--card-title-color); font-size: var(--card-title-size); font-family: var(--main-font); font-weight: 800; }
+        
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 3rem; }
+        .pagination a, .pagination span { padding: 0.75rem 1.25rem; border-radius: 1rem; font-weight: 800; text-decoration: none; font-size: 0.875rem; transition: all 0.2s; }
+        .pagination a { background: white; color: var(--link-color); border: 1px solid #e2e8f0; }
+        .pagination a:hover { background: var(--link-color); color: white; border-color: var(--link-color); transform: translateY(-2px); }
+        .pagination .current { background: var(--link-color); color: white; border: 1px solid var(--link-color); }
+        .pagination .disabled { opacity: 0.5; cursor: not-allowed; background: #f1f5f9; color: #94a3b8; }
     </style>
     
         <meta name="google-site-verification" content="555555555" />
@@ -248,6 +255,7 @@ What is a Web Server Virtual Host, and How is it Used in Web Hosting? Web hostin
                     </article>
                     
             </div>
+            <div class="pagination"><span class="disabled">Previous</span><span class="current">1</span><a href="/category/Hosting tutorials_p2.html">2</a><a href="/category/Hosting tutorials_p2.html">Next</a></div>
         </main>
         <footer class="bg-slate-900 text-sky-200 text-center py-12 mt-16">
             <div class="max-w-7xl mx-auto px-5">
