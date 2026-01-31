@@ -10,52 +10,144 @@
         <link rel="amphtml" href="https://blog-6ut.pages.dev/posts/what-is-web-server-ssl-offloading-and/amp/index.html">
         
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;800;900&display=swap');
+        
+        
+        
+        
+        
+        
+
         :root {
             --main-font: 'Cairo', sans-serif;
-            --bg-color: #f8fafc;
-            --text-color: #272023;
+            --bg-color: #0f172a;
+            
+            /* Body Text */
+            --text-font: var(--main-font);
+            --text-color: #1e293b;
             --text-size: 18px;
             --text-weight: 400;
-            --line-height: 1.7;
-            --title-font: 'Roboto';
-            --title-color: #2258d8;
+            --text-line-height: 1.7;
+            
+            /* Post Title */
+            --title-font: var(--main-font);
+            --title-color: #0f172a;
             --title-size: 48px;
             --title-weight: 900;
-            --sub-font: 'Roboto';
-            --sub-color: #4bba17;
+            --title-line-height: 1.2;
+            
+            /* Subtitles H2 */
+            --sub-font: var(--main-font);
+            --sub-color: #1e293b;
             --sub-size: 32px;
             --sub-weight: 700;
+            --sub-line-height: 1.4;
+            
+            /* H3 Titles */
+            --h3-font: var(--main-font);
             --h3-color: #1e293b;
             --h3-size: 24px;
+            --h3-weight: 700;
+            --h3-line-height: 1.4;
+            
+            /* Links */
             --link-color: #6366f1;
+            --link-size: 18px;
+            --link-weight: 700;
+            
+            /* Card Title */
+            --card-title-font: var(--main-font);
             --card-title-color: #1e293b;
             --card-title-size: 20px;
+            --card-title-weight: 800;
+            --card-title-line-height: 1.4;
+            
+            /* Layout & Others */
             --para-spacing: 24px;
             --post-padding-top: 48px;
             --blockquote-bg: #f1f5f9;
             --code-bg: #1e293b;
         }
-        body { font-family: var(--main-font); scroll-behavior: smooth; background-color: var(--bg-color); color: var(--text-color); font-size: var(--text-size); line-height: var(--line-height); overflow-x: hidden; }
-        .prose { max-width: 100%; overflow-wrap: break-word; }
-        .prose h1 { font-family: var(--title-font); color: var(--title-color); font-size: var(--title-size); font-weight: var(--title-weight); margin-bottom: var(--para-spacing); }
-        .prose h2 { font-family: var(--sub-font); color: var(--sub-color); font-size: var(--sub-size); font-weight: var(--sub-weight); padding-left: 1rem; border-left: 4px solid var(--link-color); margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 2); line-height: 1.4; }
-        .prose h3 { color: var(--h3-color); font-size: var(--h3-size); font-weight: 800; margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 1.5); line-height: 1.4; }
-        .prose p { margin-bottom: var(--para-spacing); font-weight: var(--text-weight); }
-        .prose a { color: var(--link-color); text-decoration: underline; }
+        
+        body { 
+          font-family: var(--main-font); 
+          scroll-behavior: smooth; 
+          background-color: var(--bg-color); 
+          color: var(--text-color); 
+          font-size: var(--text-size); 
+          line-height: var(--text-line-height); 
+          overflow-x: hidden; 
+        }
+        
+        .prose { max-width: 100%; overflow-wrap: break-word; font-family: var(--text-font); }
+        
+        .prose h1 { 
+          font-family: var(--title-font); 
+          color: var(--title-color); 
+          font-size: var(--title-size); 
+          font-weight: var(--title-weight); 
+          margin-bottom: var(--para-spacing); 
+          line-height: var(--title-line-height);
+        }
+        
+        .prose h2 { 
+          font-family: var(--sub-font); 
+          color: var(--sub-color); 
+          font-size: var(--sub-size); 
+          font-weight: var(--sub-weight); 
+          padding-left: 1rem; 
+          border-left: 4px solid var(--link-color); 
+          margin-bottom: var(--para-spacing); 
+          margin-top: calc(var(--para-spacing) * 2); 
+          line-height: var(--sub-line-height); 
+        }
+        
+        .prose h3 { 
+          font-family: var(--h3-font);
+          color: var(--h3-color); 
+          font-size: var(--h3-size); 
+          font-weight: var(--h3-weight); 
+          margin-bottom: var(--para-spacing); 
+          margin-top: calc(var(--para-spacing) * 1.5); 
+          line-height: var(--h3-line-height); 
+        }
+        
+        .prose p { margin-bottom: var(--para-spacing); font-weight: var(--text-weight); line-height: var(--text-line-height); }
+        
+        .prose a { 
+          color: var(--link-color); 
+          text-decoration: underline; 
+          font-size: var(--link-size);
+          font-weight: var(--link-weight);
+        }
+        
         .prose ul { list-style-type: disc; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
         .prose ol { list-style-type: decimal; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
         .prose li { margin-bottom: 0.5rem; }
         .prose img { max-width: 100%; height: auto; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) auto; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); display: block; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) 0; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .prose blockquote { background: var(--blockquote-bg); padding: 1.5rem 2rem; border-left: 6px solid var(--link-color); border-radius: 1rem; font-style: italic; margin: var(--para-spacing) 0; position: relative; color: #475569; }
+        .prose blockquote { background: var(--blockquote-bg); padding: 1.5rem 2rem; border-left: 6px solid var(--link-color); border-radius: 1rem; font-style: italic; margin: var(--para-spacing) 0; position: relative; color: #94a3b8; }
         .prose blockquote::before { content: '“'; position: absolute; top: 0; left: 10px; font-size: 4rem; opacity: 0.1; line-height: 1; }
         .prose pre { background: var(--code-bg); color: #f8fafc; padding: 1.5rem; border-radius: 1rem; font-family: 'Fira Code', 'Courier New', monospace; white-space: pre-wrap; word-break: break-all; max-width: 100%; overflow-x: auto; margin: var(--para-spacing) 0; line-height: 1.6; border: 1px solid rgba(255,255,255,0.1); }
         .prose code { background: rgba(0,0,0,0.05); color: var(--link-color); padding: 0.2rem 0.4rem; border-radius: 0.4rem; font-family: monospace; font-weight: bold; }
-        .post-header-gradient { background: linear-gradient(135deg, #0f172a 0%, #075985 100%); }
+        .post-header-gradient { background: rgb(79 70 229 / var(--tw-bg-opacity, 1)); }
         .no-underline { text-decoration: none !important; }
-        .card-title { color: var(--card-title-color); font-size: var(--card-title-size); font-family: var(--main-font); font-weight: 800; }
+        
+        .card-title { 
+          font-family: var(--card-title-font);
+          color: var(--card-title-color); 
+          font-size: var(--card-title-size); 
+          font-weight: var(--card-title-weight);
+          line-height: var(--card-title-line-height);
+        }
+        
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 3rem; }
+        .pagination a, .pagination span { padding: 0.75rem 1.25rem; border-radius: 1rem; font-weight: 800; text-decoration: none; font-size: 0.875rem; transition: all 0.2s; }
+        .pagination a { background: white; color: var(--link-color); border: 1px solid #e2e8f0; }
+        .pagination a:hover { background: var(--link-color); color: white; border-color: var(--link-color); transform: translateY(-2px); }
+        .pagination .current { background: var(--link-color); color: white; border: 1px solid var(--link-color); }
+        .pagination .disabled { opacity: 0.5; cursor: not-allowed; background: #f1f5f9; color: #94a3b8; }
     </style>
     
         <meta name="google-site-verification" content="555555555" />
@@ -71,7 +163,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=6666666" crossorigin="anonymous"></script>
 
     </head>
-    <body class="antialiased overflow-x-hidden">
+    <body class="antialiased overflow-x-hidden bg-white">
         
     <header class="bg-slate-900 text-white py-4 sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto px-5">
@@ -93,18 +185,18 @@
         </div>
     </header>
     
-        <main style="padding-top: var(--post-padding-top);">
+        <main style="padding-top: var(--post-padding-top);" class="bg-white">
             <div class="max-w-7xl mx-auto px-5">
                 <header class="post-header relative isolate overflow-hidden post-header-gradient text-white px-6 sm:px-10 py-20 rounded-3xl shadow-xl">
                     <div class="relative z-10 text-center">
                         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight text-white m-0">What is Web Server SSL Offloading, and How is it Used in Web Hosting?</h1>
-                        <p class="text-lg text-sky-200 max-w-3xl mx-auto mb-6 m-0">What is Web Server SSL Offloading, and How is it Used in Web Hosting?</p>
-                        <div class="post-meta text-sky-300 text-sm flex items-center justify-center gap-2">
+                        <p class="text-lg text-sky-50 max-w-3xl mx-auto mb-6 m-0">What is Web Server SSL Offloading, and How is it Used in Web Hosting?</p>
+                        <div class="post-meta text-sky-100 text-sm flex items-center justify-center gap-2">
                             <span>نشر بتاريخ <span class="font-bold text-white">May 4, 2023</span></span>
                         </div>
                     </div>
                 </header>
-                <div class="flex flex-col lg:flex-row gap-8 xl:gap-12 items-start mb-12 -mt-16">
+                <div class="flex flex-col lg:flex-row gap-8 xl:gap-12 items-start mb-12 -mt-16 bg-transparent">
                     <article class="relative z-20 w-full lg:flex-[2] bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-slate-200 prose">
                         <meta content="web server SSL offloading, web hosting, SSL termination, SSL certificates, load balancing" name="keywords"></meta> <div dir="ltr" style="text-align: left;">What is Web Server SSL Offloading, and How is it Used in Web Hosting? <span style="text-align: right;">Web hosting is a critical service that requires a robust and secure infrastructure to ensure the smooth functioning of websites and web applications.</span></div><div dir="ltr" style="text-align: left;"><span style="text-align: right;"><br /></span></div><div dir="ltr" style="text-align: left;"> One important aspect of web hosting is SSL offloading, which can help to enhance website security and performance.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> In this blog post, we will discuss what web server SSL offloading is and how it is used in web hosting.</div><div dir="ltr" style="text-align: left;"><br /><div dir="ltr" style="text-align: left;"><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEisqFW_hfQnpVAel1m8XPL2kaqfsIRcMqYguyo4-4pmhVyyFbVoTcPASr1bDxbin_j0MeD-cU2jAVuRB1uveoZUhv-pP0ZA4oZq7QvGGewJVQfDImOq1fyO4Olqu6_D6FYHkueHz04HMAg2h6sdthe1AQFME6Qh1GybkQ92FRcVRgUK2wa1drMEMJQe" style="margin-left: 1em; margin-right: 1em;"><img alt="What is Web Server SSL Offloading, and How is it Used in Web Hosting?" data-original-height="706" data-original-width="1060" height="213" src="https://blogger.googleusercontent.com/img/a/AVvXsEisqFW_hfQnpVAel1m8XPL2kaqfsIRcMqYguyo4-4pmhVyyFbVoTcPASr1bDxbin_j0MeD-cU2jAVuRB1uveoZUhv-pP0ZA4oZq7QvGGewJVQfDImOq1fyO4Olqu6_D6FYHkueHz04HMAg2h6sdthe1AQFME6Qh1GybkQ92FRcVRgUK2wa1drMEMJQe=w320-h213" title="What is Web Server SSL Offloading, and How is it Used in Web Hosting?" width="320" /></a></div><br /><br /></div><div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> <h2 dir="ltr" style="text-align: left;">What is Web Server SSL Offloading?</h2><div><br /></div> Web server SSL offloading, also known as SSL termination, is a process in which SSL traffic is decrypted at the load balancer or proxy server before being forwarded to the web server.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> SSL offloading relieves the web server of the processing burden of SSL encryption and decryption, allowing it to focus on serving web content.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> <h2 dir="ltr" style="text-align: left;">How is Web Server SSL Offloading Used in Web Hosting?</h2><div><br /></div> Web hosting providers use SSL offloading to enhance website security and performance.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> SSL certificates are used to encrypt data transmitted between the client's web browser and the web server, ensuring that sensitive information such as passwords and credit card details cannot be intercepted by hackers.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> However, SSL encryption can also be resource-intensive, which can impact website performance.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> By offloading SSL processing to a load balancer or proxy server, web hosting providers can ensure that the web server is not bogged down by SSL encryption and decryption.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> Some benefits of using SSL offloading in web hosting include: <ol> <li><strong>Improved website performance:</strong> SSL offloading reduces the processing burden on the web server, improving website performance and reducing page load times.</li> <li><strong>Enhanced website security:</strong> SSL offloading ensures that SSL encryption and decryption occur in a secure environment, reducing the risk of security breaches and data theft.</li> <li><strong>Reduced server load:</strong> SSL offloading distributes the processing load across multiple servers, reducing the load on individual web servers and ensuring that websites and web applications can handle high traffic volumes.</li> </ol><div><br /></div> <h2 dir="ltr" style="text-align: left;">Conclusion</h2><div><br /></div> In conclusion, web server SSL offloading is a critical process in web hosting that can enhance website security and performance.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> By offloading SSL processing to a load balancer or proxy server, web hosting providers can ensure that websites and web applications are secure and responsive, even during periods of high traffic.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> By understanding the benefits of SSL offloading and how it is used in web hosting, hosting providers can ensure that they are equipped with the knowledge and tools necessary to provide top-notch web hosting services.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> </div></div></div></div></div></div></div></div></div></div></div></div>
                     </article>
@@ -113,6 +205,10 @@
                             <h3 class="text-xl font-bold text-slate-800 mb-4 pb-2 border-b border-slate-100">Recommended Posts</h3>
                             <div class="space-y-4">
                                 
+                                    <a href="/posts/eeee.html" class="group block no-underline">
+                                        <h4 class="text-base font-semibold text-slate-700 group-hover:text-sky-600 transition-colors m-0 leading-tight">jjjj</h4>
+                                    </a>
+                                <hr class="border-slate-50">
                                     <a href="/posts/easy-steps-to-install-hugo-on-mac.html" class="group block no-underline">
                                         <h4 class="text-base font-semibold text-slate-700 group-hover:text-sky-600 transition-colors m-0 leading-tight">Easy Steps to Install Hugo on Mac: A Comprehensive Guide</h4>
                                     </a>
@@ -128,10 +224,6 @@
                                     <a href="/posts/how-gzip-compression-can-improve.html" class="group block no-underline">
                                         <h4 class="text-base font-semibold text-slate-700 group-hover:text-sky-600 transition-colors m-0 leading-tight">How Gzip Compression Can Improve Website Load Time</h4>
                                     </a>
-                                <hr class="border-slate-50">
-                                    <a href="/posts/gzip-vs-other-compression-techniques.html" class="group block no-underline">
-                                        <h4 class="text-base font-semibold text-slate-700 group-hover:text-sky-600 transition-colors m-0 leading-tight">Gzip vs. Other Compression Techniques: Which is Better for Website Performance?</h4>
-                                    </a>
                                 
                             </div>
                         </div>
@@ -139,7 +231,7 @@
                 </div>
             </div>
         </main>
-        <footer class="bg-slate-900 text-sky-200 text-center py-12 mt-16">
+        <footer class="bg-slate-900 text-sky-200 text-center py-12">
             <div class="max-w-7xl mx-auto px-5">
                 <h2 class="text-2xl font-extrabold text-white mb-6">Visa earth</h2>
                 <p class="text-sm m-0 opacity-60">&copy; 2026 <a href="https://cms.gitut.com/en" class="text-white no-underline hover:text-sky-400 transition-colors">Visa earth</a>. All Rights Reserved</p>
