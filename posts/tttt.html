@@ -7,6 +7,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEjkGCrmp8eAGwzm3xT-8tifWeZwI6pwDti7gvpVxpW7aIMFfrxutIq8MaQVwWSonlisheakMWk_thkwsaiHUTGbGLsCkyIsER605MilN4jS184MEpAE_XOIl-L6qyNyVp9DKFv5mpOh8miC5A70cZeriTb45X94VYrmW1QhspDSXtSo2MJMuDECpGPTYpI">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fira-code@6.2.0/distr/fira_code.css">
+        <link rel="amphtml" href="https://blog-6ut.pages.dev/posts/tttt/amp/index.html">
         
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
@@ -50,6 +51,12 @@
         .prose p { margin-bottom: var(--para-spacing); font-weight: var(--text-weight); }
         .prose a { color: var(--link-color); text-decoration: underline; }
         
+        /* تنسيق القوائم */
+        .prose ul { list-style-type: disc; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
+        .prose ol { list-style-type: decimal; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
+        .prose li { margin-bottom: 0.5rem; }
+        .prose li > ul, .prose li > ol { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+
         /* الصور والفيديو */
         .prose img { max-width: 100%; height: auto; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) auto; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); display: block; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) 0; }
