@@ -17,137 +17,39 @@
             --text-size: 18px;
             --text-weight: 400;
             --line-height: 1.7;
-            
             --title-font: var(--main-font);
             --title-color: #2258d8;
             --title-size: 48px;
             --title-weight: 900;
-            
             --sub-font: var(--main-font);
             --sub-color: #4bba17;
             --sub-size: 32px;
             --sub-weight: 700;
-            
             --h3-color: #1e293b;
             --h3-size: 24px;
-            
             --link-color: #6366f1;
-            
             --card-title-color: #1e293b;
             --card-title-size: 20px;
-            
             --para-spacing: 24px;
             --post-padding-top: 48px;
             --blockquote-bg: #f1f5f9;
             --code-bg: #1e293b;
         }
-
-        body { 
-            font-family: var(--main-font); 
-            scroll-behavior: smooth; 
-            background-color: var(--bg-color); 
-            color: var(--text-color); 
-            font-size: var(--text-size);
-            line-height: var(--line-height);
-            overflow-x: hidden; 
-        }
-        
-        .prose { 
-            max-width: 100%; 
-            overflow-wrap: break-word; 
-            word-wrap: break-word; 
-            word-break: normal;
-        }
-        
-        .prose h1 { 
-            font-family: var(--title-font);
-            color: var(--title-color);
-            font-size: var(--title-size);
-            font-weight: var(--title-weight);
-            margin-bottom: var(--para-spacing);
-        }
-
-        .prose h2 { 
-            font-family: var(--sub-font);
-            color: var(--sub-color); 
-            font-size: var(--sub-size); 
-            font-weight: var(--sub-weight); 
-            padding-right: 1rem; 
-            border-right: 4px solid var(--link-color); 
-            margin-bottom: var(--para-spacing); 
-            margin-top: calc(var(--para-spacing) * 2); 
-            line-height: 1.4; 
-        }
-
-        .prose h3 { 
-            color: var(--h3-color); 
-            font-size: var(--h3-size); 
-            font-weight: 800; 
-            margin-bottom: var(--para-spacing); 
-            margin-top: calc(var(--para-spacing) * 1.5); 
-            line-height: 1.4; 
-        }
-
-        .prose p { 
-            margin-bottom: var(--para-spacing); 
-            font-weight: var(--text-weight);
-        }
-        
-        .prose a {
-            color: var(--link-color);
-            text-decoration: underline;
-        }
-
-        .prose img, .prose video, .prose iframe { 
-            max-width: 100%; 
-            height: auto; 
-            border-radius: 1.5rem; 
-            margin: calc(var(--para-spacing) * 1.5) 0; 
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); 
-            display: block;
-        }
-        
-        .prose blockquote {
-            background: var(--blockquote-bg);
-            padding: 1.5rem;
-            border-right: 5px solid var(--link-color);
-            border-radius: 1rem;
-            font-style: italic;
-            margin: var(--para-spacing) 0;
-        }
-
-        .prose pre, .prose code { 
-            background: var(--code-bg); 
-            color: #f8fafc;
-            padding: 0.2rem 0.4rem; 
-            border-radius: 0.5rem; 
-            font-family: monospace; 
-            white-space: pre-wrap; 
-            word-break: break-all;
-            max-width: 100%;
-            overflow-x: auto;
-        }
-        
+        body { font-family: var(--main-font); scroll-behavior: smooth; background-color: var(--bg-color); color: var(--text-color); font-size: var(--text-size); line-height: var(--line-height); overflow-x: hidden; }
+        .prose { max-width: 100%; overflow-wrap: break-word; word-wrap: break-word; word-break: normal; }
+        .prose h1 { font-family: var(--title-font); color: var(--title-color); font-size: var(--title-size); font-weight: var(--title-weight); margin-bottom: var(--para-spacing); }
+        .prose h2 { font-family: var(--sub-font); color: var(--sub-color); font-size: var(--sub-size); font-weight: var(--sub-weight); padding-right: 1rem; border-right: 4px solid var(--link-color); margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 2); line-height: 1.4; }
+        .prose h3 { color: var(--h3-color); font-size: var(--h3-size); font-weight: 800; margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 1.5); line-height: 1.4; }
+        .prose p { margin-bottom: var(--para-spacing); font-weight: var(--text-weight); }
+        .prose a { color: var(--link-color); text-decoration: underline; }
+        .prose img, .prose video, .prose iframe { max-width: 100%; height: auto; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) 0; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); display: block; }
+        .prose blockquote { background: var(--blockquote-bg); padding: 1.5rem; border-right: 5px solid var(--link-color); border-radius: 1rem; font-style: italic; margin: var(--para-spacing) 0; }
+        .prose pre, .prose code { background: var(--code-bg); color: #f8fafc; padding: 0.2rem 0.4rem; border-radius: 0.5rem; font-family: monospace; white-space: pre-wrap; word-break: break-all; max-width: 100%; overflow-x: auto; }
         .prose pre { padding: 1.5rem; margin: var(--para-spacing) 0; display: block; line-height: 1.6; }
-        
-        .post-header-gradient { 
-            background: linear-gradient(135deg, #0f172a 0%, #075985 100%); 
-        }
-
+        .post-header-gradient { background: linear-gradient(135deg, #0f172a 0%, #075985 100%); }
         .no-underline { text-decoration: none !important; }
-
-        .card-title {
-            color: var(--card-title-color);
-            font-size: var(--card-title-size);
-            font-family: var(--main-font);
-            font-weight: 800;
-        }
-        
-        @media (max-width: 640px) {
-            .prose h1 { font-size: calc(var(--title-size) * 0.7); }
-            .prose h2 { font-size: calc(var(--sub-size) * 0.8); }
-            .prose p { font-size: 0.95em; }
-        }
+        .card-title { color: var(--card-title-color); font-size: var(--card-title-size); font-family: var(--main-font); font-weight: 800; }
+        @media (max-width: 640px) { .prose h1 { font-size: calc(var(--title-size) * 0.7); } .prose h2 { font-size: calc(var(--sub-size) * 0.8); } .prose p { font-size: 0.95em; } }
     </style>
     
         <meta name="google-site-verification" content="555555555" />
@@ -200,11 +102,7 @@
 
                 <div class="flex flex-col lg:flex-row gap-8 xl:gap-12 items-start mb-12 -mt-16">
                     <article class="relative z-20 w-full lg:flex-[2] bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-slate-200 prose">
-                        <div class="text-center py-20">
-            <h1 class="text-6xl font-black text-sky-600 mb-4">404</h1>
-            <p class="text-xl text-slate-500 mb-8">عذراً، الصفحة التي تبحث عنها قد تم نقلها أو حذفها أو أنها غير متوفرة حالياً.</p>
-            <a href="/" class="bg-sky-600 text-white px-8 py-4 rounded-2xl font-black shadow-lg no-underline inline-block">العودة للرئيسية</a>
-        </div>
+                        <div class="text-center py-20"> <h1 class="text-6xl font-black text-sky-600 mb-4">404</h1> <p class="text-xl text-slate-500 mb-8">عذراً، الصفحة التي تبحث عنها قد تم نقلها أو حذفها أو أنها غير متوفرة حالياً.</p> <a href="/" class="bg-sky-600 text-white px-8 py-4 rounded-2xl font-black shadow-lg no-underline inline-block">العودة للرئيسية</a> </div>
                     </article>
                     
                     <aside class="relative z-10 w-full lg:flex-1 lg:sticky lg:top-28">

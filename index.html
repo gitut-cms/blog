@@ -17,137 +17,39 @@
             --text-size: 18px;
             --text-weight: 400;
             --line-height: 1.7;
-            
             --title-font: var(--main-font);
             --title-color: #2258d8;
             --title-size: 48px;
             --title-weight: 900;
-            
             --sub-font: var(--main-font);
             --sub-color: #4bba17;
             --sub-size: 32px;
             --sub-weight: 700;
-            
             --h3-color: #1e293b;
             --h3-size: 24px;
-            
             --link-color: #6366f1;
-            
             --card-title-color: #1e293b;
             --card-title-size: 20px;
-            
             --para-spacing: 24px;
             --post-padding-top: 48px;
             --blockquote-bg: #f1f5f9;
             --code-bg: #1e293b;
         }
-
-        body { 
-            font-family: var(--main-font); 
-            scroll-behavior: smooth; 
-            background-color: var(--bg-color); 
-            color: var(--text-color); 
-            font-size: var(--text-size);
-            line-height: var(--line-height);
-            overflow-x: hidden; 
-        }
-        
-        .prose { 
-            max-width: 100%; 
-            overflow-wrap: break-word; 
-            word-wrap: break-word; 
-            word-break: normal;
-        }
-        
-        .prose h1 { 
-            font-family: var(--title-font);
-            color: var(--title-color);
-            font-size: var(--title-size);
-            font-weight: var(--title-weight);
-            margin-bottom: var(--para-spacing);
-        }
-
-        .prose h2 { 
-            font-family: var(--sub-font);
-            color: var(--sub-color); 
-            font-size: var(--sub-size); 
-            font-weight: var(--sub-weight); 
-            padding-right: 1rem; 
-            border-right: 4px solid var(--link-color); 
-            margin-bottom: var(--para-spacing); 
-            margin-top: calc(var(--para-spacing) * 2); 
-            line-height: 1.4; 
-        }
-
-        .prose h3 { 
-            color: var(--h3-color); 
-            font-size: var(--h3-size); 
-            font-weight: 800; 
-            margin-bottom: var(--para-spacing); 
-            margin-top: calc(var(--para-spacing) * 1.5); 
-            line-height: 1.4; 
-        }
-
-        .prose p { 
-            margin-bottom: var(--para-spacing); 
-            font-weight: var(--text-weight);
-        }
-        
-        .prose a {
-            color: var(--link-color);
-            text-decoration: underline;
-        }
-
-        .prose img, .prose video, .prose iframe { 
-            max-width: 100%; 
-            height: auto; 
-            border-radius: 1.5rem; 
-            margin: calc(var(--para-spacing) * 1.5) 0; 
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); 
-            display: block;
-        }
-        
-        .prose blockquote {
-            background: var(--blockquote-bg);
-            padding: 1.5rem;
-            border-right: 5px solid var(--link-color);
-            border-radius: 1rem;
-            font-style: italic;
-            margin: var(--para-spacing) 0;
-        }
-
-        .prose pre, .prose code { 
-            background: var(--code-bg); 
-            color: #f8fafc;
-            padding: 0.2rem 0.4rem; 
-            border-radius: 0.5rem; 
-            font-family: monospace; 
-            white-space: pre-wrap; 
-            word-break: break-all;
-            max-width: 100%;
-            overflow-x: auto;
-        }
-        
+        body { font-family: var(--main-font); scroll-behavior: smooth; background-color: var(--bg-color); color: var(--text-color); font-size: var(--text-size); line-height: var(--line-height); overflow-x: hidden; }
+        .prose { max-width: 100%; overflow-wrap: break-word; word-wrap: break-word; word-break: normal; }
+        .prose h1 { font-family: var(--title-font); color: var(--title-color); font-size: var(--title-size); font-weight: var(--title-weight); margin-bottom: var(--para-spacing); }
+        .prose h2 { font-family: var(--sub-font); color: var(--sub-color); font-size: var(--sub-size); font-weight: var(--sub-weight); padding-right: 1rem; border-right: 4px solid var(--link-color); margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 2); line-height: 1.4; }
+        .prose h3 { color: var(--h3-color); font-size: var(--h3-size); font-weight: 800; margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 1.5); line-height: 1.4; }
+        .prose p { margin-bottom: var(--para-spacing); font-weight: var(--text-weight); }
+        .prose a { color: var(--link-color); text-decoration: underline; }
+        .prose img, .prose video, .prose iframe { max-width: 100%; height: auto; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) 0; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); display: block; }
+        .prose blockquote { background: var(--blockquote-bg); padding: 1.5rem; border-right: 5px solid var(--link-color); border-radius: 1rem; font-style: italic; margin: var(--para-spacing) 0; }
+        .prose pre, .prose code { background: var(--code-bg); color: #f8fafc; padding: 0.2rem 0.4rem; border-radius: 0.5rem; font-family: monospace; white-space: pre-wrap; word-break: break-all; max-width: 100%; overflow-x: auto; }
         .prose pre { padding: 1.5rem; margin: var(--para-spacing) 0; display: block; line-height: 1.6; }
-        
-        .post-header-gradient { 
-            background: linear-gradient(135deg, #0f172a 0%, #075985 100%); 
-        }
-
+        .post-header-gradient { background: linear-gradient(135deg, #0f172a 0%, #075985 100%); }
         .no-underline { text-decoration: none !important; }
-
-        .card-title {
-            color: var(--card-title-color);
-            font-size: var(--card-title-size);
-            font-family: var(--main-font);
-            font-weight: 800;
-        }
-        
-        @media (max-width: 640px) {
-            .prose h1 { font-size: calc(var(--title-size) * 0.7); }
-            .prose h2 { font-size: calc(var(--sub-size) * 0.8); }
-            .prose p { font-size: 0.95em; }
-        }
+        .card-title { color: var(--card-title-color); font-size: var(--card-title-size); font-family: var(--main-font); font-weight: 800; }
+        @media (max-width: 640px) { .prose h1 { font-size: calc(var(--title-size) * 0.7); } .prose h2 { font-size: calc(var(--sub-size) * 0.8); } .prose p { font-size: 0.95em; } }
     </style>
     
         <meta name="google-site-verification" content="555555555" />
@@ -199,7 +101,7 @@
                             <h2 class="card-title mb-3 leading-tight m-0">
                                 <a href="/posts/سيبسيبسيب.html" class="no-underline text-inherit hover:text-sky-600">بيسيبسيبسيب</a>
                             </h2>
-                            <p class="text-slate-500 text-sm mb-6 flex-1">أكيد&nbsp;👍إليك&nbsp;مقالًا&nbsp;متكاملًا&nbsp;عن&nbsp;الربح&nbsp;من&nbsp;الإنترنت&nbsp;بأسلوب&nbsp;واضح&nbsp;واحترافي:...</p>
+                            <p class="text-slate-500 text-sm mb-6 flex-1">أكيد 👍إليك مقالًا متكاملًا عن الربح من الإنترنت بأسلوب واضح واحترافي:الربح من الإنترنت: دليل شامل لبناء دخل حقيقي أونلا...</p>
                             <a href="/posts/سيبسيبسيب.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
                                 اقرأ المزيد
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="rotate-180"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
