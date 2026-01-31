@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Visa</title>
+        <meta name="description" content="blog talk about visa and immigration ">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEjkGCrmp8eAGwzm3xT-8tifWeZwI6pwDti7gvpVxpW7aIMFfrxutIq8MaQVwWSonlisheakMWk_thkwsaiHUTGbGLsCkyIsER605MilN4jS184MEpAE_XOIl-L6qyNyVp9DKFv5mpOh8miC5A70cZeriTb45X94VYrmW1QhspDSXtSo2MJMuDECpGPTYpI">
+        
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+        
+        :root {
+            --main-font: 'Cairo', sans-serif;
+            --bg-color: #f8fafc;
+            --text-color: #272023;
+            --text-size: 18px;
+            --text-weight: 400;
+            --line-height: 1.7;
+            
+            --title-font: var(--main-font);
+            --title-color: #2258d8;
+            --title-size: 48px;
+            --title-weight: 900;
+            
+            --sub-font: var(--main-font);
+            --sub-color: #4bba17;
+            --sub-size: 32px;
+            --sub-weight: 700;
+            
+            --h3-color: #1e293b;
+            --h3-size: 24px;
+            
+            --link-color: #6366f1;
+            
+            --card-title-color: #1e293b;
+            --card-title-size: 20px;
+            
+            --para-spacing: 24px;
+            --post-padding-top: 48px;
+            --blockquote-bg: #f1f5f9;
+            --code-bg: #1e293b;
+        }
+        body { font-family: var(--main-font); scroll-behavior: smooth; background-color: var(--bg-color); color: var(--text-color); font-size: var(--text-size); line-height: var(--line-height); overflow-x: hidden; }
+        .prose { max-width: 100%; overflow-wrap: break-word; }
+        .prose h1 { font-family: var(--title-font); color: var(--title-color); font-size: var(--title-size); font-weight: var(--title-weight); margin-bottom: var(--para-spacing); }
+        .prose h2 { font-family: var(--sub-font); color: var(--sub-color); font-size: var(--sub-size); font-weight: var(--sub-weight); padding-left: 1rem; border-left: 4px solid var(--link-color); margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 2); line-height: 1.4; }
+        .prose h3 { color: var(--h3-color); font-size: var(--h3-size); font-weight: 800; margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 1.5); line-height: 1.4; }
+        .prose p { margin-bottom: var(--para-spacing); font-weight: var(--text-weight); }
+        .prose a { color: var(--link-color); text-decoration: underline; }
+        
+        /* تنسيق القوائم */
+        .prose ul { list-style-type: disc; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
+        .prose ol { list-style-type: decimal; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
+        .prose li { margin-bottom: 0.5rem; }
+        .prose li > ul, .prose li > ol { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+
+        /* الصور والفيديو المستجيب */
+        .prose img { max-width: 100%; height: auto; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) auto; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); display: block; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        
+        /* الاقتباسات */
+        .prose blockquote { background: var(--blockquote-bg); padding: 1.5rem 2rem; border-left: 6px solid var(--link-color); border-radius: 1rem; font-style: italic; margin: var(--para-spacing) 0; position: relative; color: #475569; }
+        .prose blockquote::before { content: '“'; position: absolute; top: 0; left: 10px; font-size: 4rem; opacity: 0.1; line-height: 1; }
+        
+        /* كتل الكود */
+        .prose pre { background: var(--code-bg); color: #f8fafc; padding: 1.5rem; border-radius: 1rem; font-family: 'Fira Code', 'Courier New', monospace; white-space: pre-wrap; word-break: break-all; max-width: 100%; overflow-x: auto; margin: var(--para-spacing) 0; line-height: 1.6; border: 1px solid rgba(255,255,255,0.1); }
+        .prose code { background: rgba(0,0,0,0.05); color: var(--link-color); padding: 0.2rem 0.4rem; border-radius: 0.4rem; font-family: monospace; font-weight: bold; }
+        .prose pre code { background: transparent; color: inherit; padding: 0; border-radius: 0; font-weight: normal; }
+
+        .post-header-gradient { background: linear-gradient(135deg, #0f172a 0%, #075985 100%); }
+        .no-underline { text-decoration: none !important; }
+        .card-title { color: var(--card-title-color); font-size: var(--card-title-size); font-family: var(--main-font); font-weight: 800; }
+        @media (max-width: 640px) { .prose h1 { font-size: calc(var(--title-size) * 0.7); } .prose h2 { font-size: calc(var(--sub-size) * 0.8); } .prose p { font-size: 0.95em; } }
+    </style>
+    
+        <meta name="google-site-verification" content="555555555" />
+<meta name="msvalidate.01" content="7777777" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=4444444"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '4444444');
+        </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=6666666" crossorigin="anonymous"></script>
+
+    </head>
+    <body class="antialiased overflow-x-hidden">
+        
+    <header class="bg-slate-900 text-white py-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-5">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center gap-6">
+                    <a href="/" class="flex items-center gap-3 no-underline">
+                        
+        <svg width="36" height="36" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#0ea5e9"/><path d="M22.5 16C22.5 19.5882 19.5882 22.5 16 22.5C12.4118 22.5 9.5 19.5882 9.5 16C9.5 12.4118 12.4118 9.5 16 9.5V13.5H18.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="text-2xl font-black text-white ml-2">Visa earth</span>
+    
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    
+        <a href="لللللل" class="text-sm font-bold text-slate-300 hover:text-sky-400 transition-colors no-underline">اااا</a>
+    
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+        <main class="max-w-7xl mx-auto px-5 py-12">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-black text-slate-900 mb-4" style="color: var(--title-color);">Visa</h1>
+                <p class="text-slate-500 text-lg">PRO BLLOG</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                    <article class="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden flex flex-col hover:shadow-2xl transition-shadow">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEg8-EoMoxD9IX-paTYZOB_ptwE8OgGi6pQB3DZPlypIcT48sFeKhQVfVdQfVGF7rh-cc3C9uWaiSG1vubNX2McjxN9f5uXseW6AGK-HSIX7dcejyr5YJb2NzXDQ3mhptNm385R3z6cffzpX1PF5YwPYS6sJItkk1_WS1utljUASl-_jDaNEbfD8f57DmDo=s16000" class="w-full h-48 object-cover" alt=" Visa Requirements for Entering Algeria: Countries That Need Visa to enter algeria">
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h2 class="card-title mb-3 leading-tight m-0">
+                                <a href="/posts/visa-requirements-for-entering-algeria.html" class="no-underline text-inherit hover:text-sky-600"> Visa Requirements for Entering Algeria: Countries That Need Visa to enter algeria</a>
+                            </h2>
+                            <p class="text-slate-500 text-sm mb-6 flex-1">
+Algeria, a land of captivating landscapes, rich history, and vibrant culture, beckons travelers from all corners of the...</p>
+                            <a href="/posts/visa-requirements-for-entering-algeria.html" class="text-sky-600 font-bold no-underline text-sm flex items-center gap-2">
+                                Read More
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
+                    </article>
+                    
+            </div>
+        </main>
+        <footer class="bg-slate-900 text-sky-200 text-center py-12 mt-16">
+            <div class="max-w-7xl mx-auto px-5">
+                <p class="text-sm m-0 opacity-60">&copy; 2026 <a href="https://cms.gitut.com" class="text-inherit hover:text-white transition-colors decoration-none">Visa earth</a>. All Rights Reserved</p>
+            </div>
+        </footer>
+        
+    </body></html>
