@@ -10,52 +10,144 @@
         <link rel="amphtml" href="https://blog-6ut.pages.dev/posts/easy-steps-to-install-hugo-on-mac/amp/index.html">
         
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;800;900&display=swap');
+        
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;800;900&display=swap');
+        
+        
+        
+
         :root {
             --main-font: 'Cairo', sans-serif;
-            --bg-color: #f8fafc;
-            --text-color: #272023;
+            --bg-color: #0f172a;
+            
+            /* Body Text */
+            --text-font: var(--main-font);
+            --text-color: #d0397a;
             --text-size: 18px;
             --text-weight: 400;
-            --line-height: 1.7;
+            --text-line-height: 1.7;
+            
+            /* Post Title */
             --title-font: 'Roboto';
-            --title-color: #2258d8;
+            --title-color: #d8226b;
             --title-size: 48px;
             --title-weight: 900;
+            --title-line-height: 1.2;
+            
+            /* Subtitles H2 */
             --sub-font: 'Roboto';
             --sub-color: #4bba17;
             --sub-size: 32px;
             --sub-weight: 700;
-            --h3-color: #1e293b;
+            --sub-line-height: 1.4;
+            
+            /* H3 Titles */
+            --h3-font: var(--main-font);
+            --h3-color: #1f1d3a;
             --h3-size: 24px;
+            --h3-weight: 700;
+            --h3-line-height: 1.4;
+            
+            /* Links */
             --link-color: #6366f1;
-            --card-title-color: #1e293b;
+            --link-size: 18px;
+            --link-weight: 700;
+            
+            /* Card Title */
+            --card-title-font: var(--main-font);
+            --card-title-color: #df2a6c;
             --card-title-size: 20px;
+            --card-title-weight: 800;
+            --card-title-line-height: 1.4;
+            
+            /* Layout & Others */
             --para-spacing: 24px;
             --post-padding-top: 48px;
             --blockquote-bg: #f1f5f9;
             --code-bg: #1e293b;
         }
-        body { font-family: var(--main-font); scroll-behavior: smooth; background-color: var(--bg-color); color: var(--text-color); font-size: var(--text-size); line-height: var(--line-height); overflow-x: hidden; }
-        .prose { max-width: 100%; overflow-wrap: break-word; }
-        .prose h1 { font-family: var(--title-font); color: var(--title-color); font-size: var(--title-size); font-weight: var(--title-weight); margin-bottom: var(--para-spacing); }
-        .prose h2 { font-family: var(--sub-font); color: var(--sub-color); font-size: var(--sub-size); font-weight: var(--sub-weight); padding-left: 1rem; border-left: 4px solid var(--link-color); margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 2); line-height: 1.4; }
-        .prose h3 { color: var(--h3-color); font-size: var(--h3-size); font-weight: 800; margin-bottom: var(--para-spacing); margin-top: calc(var(--para-spacing) * 1.5); line-height: 1.4; }
-        .prose p { margin-bottom: var(--para-spacing); font-weight: var(--text-weight); }
-        .prose a { color: var(--link-color); text-decoration: underline; }
+        
+        body { 
+          font-family: var(--main-font); 
+          scroll-behavior: smooth; 
+          background-color: var(--bg-color); 
+          color: var(--text-color); 
+          font-size: var(--text-size); 
+          line-height: var(--text-line-height); 
+          overflow-x: hidden; 
+        }
+        
+        .prose { max-width: 100%; overflow-wrap: break-word; font-family: var(--text-font); }
+        
+        .prose h1 { 
+          font-family: var(--title-font); 
+          color: var(--title-color); 
+          font-size: var(--title-size); 
+          font-weight: var(--title-weight); 
+          margin-bottom: var(--para-spacing); 
+          line-height: var(--title-line-height);
+        }
+        
+        .prose h2 { 
+          font-family: var(--sub-font); 
+          color: var(--sub-color); 
+          font-size: var(--sub-size); 
+          font-weight: var(--sub-weight); 
+          padding-left: 1rem; 
+          border-left: 4px solid var(--link-color); 
+          margin-bottom: var(--para-spacing); 
+          margin-top: calc(var(--para-spacing) * 2); 
+          line-height: var(--sub-line-height); 
+        }
+        
+        .prose h3 { 
+          font-family: var(--h3-font);
+          color: var(--h3-color); 
+          font-size: var(--h3-size); 
+          font-weight: var(--h3-weight); 
+          margin-bottom: var(--para-spacing); 
+          margin-top: calc(var(--para-spacing) * 1.5); 
+          line-height: var(--h3-line-height); 
+        }
+        
+        .prose p { margin-bottom: var(--para-spacing); font-weight: var(--text-weight); line-height: var(--text-line-height); }
+        
+        .prose a { 
+          color: var(--link-color); 
+          text-decoration: underline; 
+          font-size: var(--link-size);
+          font-weight: var(--link-weight);
+        }
+        
         .prose ul { list-style-type: disc; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
         .prose ol { list-style-type: decimal; margin-bottom: var(--para-spacing); padding-inline-start: 2rem; }
         .prose li { margin-bottom: 0.5rem; }
         .prose img { max-width: 100%; height: auto; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) auto; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); display: block; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 1.5rem; margin: calc(var(--para-spacing) * 1.5) 0; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .prose blockquote { background: var(--blockquote-bg); padding: 1.5rem 2rem; border-left: 6px solid var(--link-color); border-radius: 1rem; font-style: italic; margin: var(--para-spacing) 0; position: relative; color: #475569; }
+        .prose blockquote { background: var(--blockquote-bg); padding: 1.5rem 2rem; border-left: 6px solid var(--link-color); border-radius: 1rem; font-style: italic; margin: var(--para-spacing) 0; position: relative; color: #94a3b8; }
         .prose blockquote::before { content: '“'; position: absolute; top: 0; left: 10px; font-size: 4rem; opacity: 0.1; line-height: 1; }
         .prose pre { background: var(--code-bg); color: #f8fafc; padding: 1.5rem; border-radius: 1rem; font-family: 'Fira Code', 'Courier New', monospace; white-space: pre-wrap; word-break: break-all; max-width: 100%; overflow-x: auto; margin: var(--para-spacing) 0; line-height: 1.6; border: 1px solid rgba(255,255,255,0.1); }
         .prose code { background: rgba(0,0,0,0.05); color: var(--link-color); padding: 0.2rem 0.4rem; border-radius: 0.4rem; font-family: monospace; font-weight: bold; }
-        .post-header-gradient { background: linear-gradient(135deg, #0f172a 0%, #075985 100%); }
+        .post-header-gradient { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
         .no-underline { text-decoration: none !important; }
-        .card-title { color: var(--card-title-color); font-size: var(--card-title-size); font-family: var(--main-font); font-weight: 800; }
+        
+        .card-title { 
+          font-family: var(--card-title-font);
+          color: var(--card-title-color); 
+          font-size: var(--card-title-size); 
+          font-weight: var(--card-title-weight);
+          line-height: var(--card-title-line-height);
+        }
+        
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 3rem; }
+        .pagination a, .pagination span { padding: 0.75rem 1.25rem; border-radius: 1rem; font-weight: 800; text-decoration: none; font-size: 0.875rem; transition: all 0.2s; }
+        .pagination a { background: white; color: var(--link-color); border: 1px solid #e2e8f0; }
+        .pagination a:hover { background: var(--link-color); color: white; border-color: var(--link-color); transform: translateY(-2px); }
+        .pagination .current { background: var(--link-color); color: white; border: 1px solid var(--link-color); }
+        .pagination .disabled { opacity: 0.5; cursor: not-allowed; background: #f1f5f9; color: #94a3b8; }
     </style>
     
         <meta name="google-site-verification" content="555555555" />
@@ -106,13 +198,17 @@
                 </header>
                 <div class="flex flex-col lg:flex-row gap-8 xl:gap-12 items-start mb-12 -mt-16">
                     <article class="relative z-20 w-full lg:flex-[2] bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-slate-200 prose">
-                        If you're looking to build a website or blog, Hugo is a popular choice for creating fast, secure, and easily customizable static sites.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> The good news is that Hugo is compatible with both Mac and Windows operating systems, so if you're a Mac user, you can easily install it on your machine and start building your website today.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> In this guide, we will walk you through the steps of installing Hugo on your Mac.</div><div dir="ltr" style="text-align: left;"><br /><div dir="ltr" style="text-align: left;"><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEgO5NSovnkTywQmo45ZLuxMBooXpr3tIEnYFYd-ObQbdXdLDD96Gh6AR1IdngYvb3rTRYwTOWmPJqSJf6fy-xoueU5aeC-ttu-eL1HwN7AporILi_KNJEkyw_8tEtFXurMMfXZuEXjE-j5ufMDM-IatM5xr-NdWqzTwtm63yfsUJjIrIB6J0RPOYSU6" style="margin-left: 1em; margin-right: 1em;"><img alt="" data-original-height="224" data-original-width="224" height="240" src="https://blogger.googleusercontent.com/img/a/AVvXsEgO5NSovnkTywQmo45ZLuxMBooXpr3tIEnYFYd-ObQbdXdLDD96Gh6AR1IdngYvb3rTRYwTOWmPJqSJf6fy-xoueU5aeC-ttu-eL1HwN7AporILi_KNJEkyw_8tEtFXurMMfXZuEXjE-j5ufMDM-IatM5xr-NdWqzTwtm63yfsUJjIrIB6J0RPOYSU6" width="240" /></a></div><br /><br /></div><div dir="ltr" style="text-align: left;"> <h2 dir="ltr" style="text-align: left;">Step 1: Install Homebrew</h2><div><br /></div> Homebrew is a package manager for Mac that simplifies the installation process for many applications, including Hugo.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> To install Homebrew, open the Terminal app on your Mac and run the following command: <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code> <h2 dir="ltr" style="text-align: left;">Step 2: Install Git</h2><div><br /></div> Git is a version control system that Hugo uses to manage your website's files.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> To install Git, open the Terminal app on your Mac and run the following command: <code>brew install git</code> <h2 dir="ltr" style="text-align: left;">Step 3: Install Hugo</h2><div><br /></div> With Homebrew and Git installed, you're ready to install Hugo.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> Open the Terminal app on your Mac and run the following command: <code>brew install hugo</code> <h2 dir="ltr" style="text-align: left;">Step 4: Verify Hugo Installation</h2><div><br /></div> To verify that Hugo is installed correctly, open the Terminal app and run the following command: <code>hugo version</code> If Hugo is installed correctly, you should see the version number displayed in the Terminal window.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> <h2 dir="ltr" style="text-align: left;">Step 5: Create a New Site with Hugo</h2><div><br /></div> To create a new site with Hugo, navigate to the directory where you want to create the site and run the following command: <code>hugo new site <your_site_name></your_site_name></code> <h2 dir="ltr" style="text-align: left;">Conclusion</h2><div><br /></div> Now that you have installed Hugo on your Mac, you can start building your website or blog.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> Hugo provides many customization options and is known for its fast page rendering speed, making it a great choice for building static sites.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> We hope this guide has helped you install Hugo and get started on your web development journey.<div dir="ltr" style="text-align: left;"><br /></div><div dir="ltr" style="text-align: left;"> </div></div></div></div></div></div></div></div></div></div>
+                        <p>If you&#39;re looking to build a website or blog, Hugo is a popular choice for creating fast, secure, and easily customizable static sites.</p><p></p><pre data-language="plain"> The good news is that Hugo is compatible with both Mac and Windows operating systems, so if you&#39;re a Mac user, you can easily install it on your machine and start building your website today. </pre><div class="video-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/wzT9-rLiMsE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div><p></p><blockquote>In this guide, we will walk you through the steps of installing Hugo on your Mac.</blockquote><p></p><p class="ql-align-center"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEgO5NSovnkTywQmo45ZLuxMBooXpr3tIEnYFYd-ObQbdXdLDD96Gh6AR1IdngYvb3rTRYwTOWmPJqSJf6fy-xoueU5aeC-ttu-eL1HwN7AporILi_KNJEkyw_8tEtFXurMMfXZuEXjE-j5ufMDM-IatM5xr-NdWqzTwtm63yfsUJjIrIB6J0RPOYSU6" rel="noopener noreferrer" target="_blank"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEgO5NSovnkTywQmo45ZLuxMBooXpr3tIEnYFYd-ObQbdXdLDD96Gh6AR1IdngYvb3rTRYwTOWmPJqSJf6fy-xoueU5aeC-ttu-eL1HwN7AporILi_KNJEkyw_8tEtFXurMMfXZuEXjE-j5ufMDM-IatM5xr-NdWqzTwtm63yfsUJjIrIB6J0RPOYSU6" height="240" width="240"></a></p><p></p><p></p><h2>Step 1: Install Homebrew</h2><p></p><p>Homebrew is a package manager for Mac that simplifies the installation process for many applications, including Hugo.</p><p></p><h2>To install Homebrew, open the Terminal app on your Mac and run the following command: <code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</code>Step 2: Install Git</h2><p></p><p>Git is a version control system that Hugo uses to manage your website&#39;s files.</p><p></p><h2>To install Git, open the Terminal app on your Mac and run the following command: <code>brew install git</code>Step 3: Install Hugo</h2><p></p><p>With Homebrew and Git installed, you&#39;re ready to install Hugo.</p><p></p><h2>Open the Terminal app on your Mac and run the following command: <code>brew install hugo</code>Step 4: Verify Hugo Installation</h2><p></p><p>To verify that Hugo is installed correctly, open the Terminal app and run the following command: <code>hugo version</code> If Hugo is installed correctly, you should see the version number displayed in the Terminal window.</p><p></p><h2>Step 5: Create a New Site with Hugo</h2><p></p><h2>To create a new site with Hugo, navigate to the directory where you want to create the site and run the following command: <code>hugo new site </code>Conclusion</h2><p></p><p>Now that you have installed Hugo on your Mac, you can start building your website or blog.</p><p></p><p>Hugo provides many customization options and is known for its fast page rendering speed, making it a great choice for building static sites.</p><p></p><p>We hope this guide has helped you install Hugo and get started on your web development journey.</p>
                     </article>
                     <aside class="relative z-10 w-full lg:flex-1 lg:sticky lg:top-28">
                         <div class="bg-white rounded-2xl shadow-xl p-6 border border-slate-200">
                             <h3 class="text-xl font-bold text-slate-800 mb-4 pb-2 border-b border-slate-100">Recommended Posts</h3>
                             <div class="space-y-4">
                                 
+                                    <a href="/posts/eeee.html" class="group block no-underline">
+                                        <h4 class="text-base font-semibold text-slate-700 group-hover:text-sky-600 transition-colors m-0 leading-tight">jjjj</h4>
+                                    </a>
+                                <hr class="border-slate-50">
                                     <a href="/posts/step-by-step-guide-how-to-install-hugo.html" class="group block no-underline">
                                         <h4 class="text-base font-semibold text-slate-700 group-hover:text-sky-600 transition-colors m-0 leading-tight">Step-by-Step Guide: How to Install Hugo on Windows</h4>
                                     </a>
@@ -127,10 +223,6 @@
                                 <hr class="border-slate-50">
                                     <a href="/posts/gzip-vs-other-compression-techniques.html" class="group block no-underline">
                                         <h4 class="text-base font-semibold text-slate-700 group-hover:text-sky-600 transition-colors m-0 leading-tight">Gzip vs. Other Compression Techniques: Which is Better for Website Performance?</h4>
-                                    </a>
-                                <hr class="border-slate-50">
-                                    <a href="/posts/the-history-and-evolution-of-gzip.html" class="group block no-underline">
-                                        <h4 class="text-base font-semibold text-slate-700 group-hover:text-sky-600 transition-colors m-0 leading-tight">The History and Evolution of Gzip Compression on Websites</h4>
                                     </a>
                                 
                             </div>
